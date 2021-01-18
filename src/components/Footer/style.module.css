@@ -1,0 +1,55 @@
+.footer {
+    background-color: #F7C331;
+    display: flex;
+    font-family: Montserrat;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerSectionLogo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 25%;
+    margin: 0 3%;
+    font-size: large;
+}
+
+.footerSectionFollow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 25%;
+    margin: 0 3%;
+    font-size: large;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    min-height: 100%;
+}
+
+.border {
+    width: 1px;
+    height: 40px;
+    background-color: black;
+}
+
+.contactSection {
+    display: flex;
+    align-items: center;
+    min-width: 25%;
+    margin-left: 6%;
+    font-size: large;
+}
+
+a {
+    color: black;
+}
+
+.clickable {
+    cursor: pointer;
+}
