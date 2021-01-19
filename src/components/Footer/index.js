@@ -14,9 +14,9 @@ const Footer = () => (
         <div className={styles.border}></div>
         <div className={styles.footerSectionFollow}>
             Prati nas
-            <Instagram />
-            <Facebook />
-            <Twitter />
+            <div className={styles.clickable}><Instagram /></div>
+            <div className={styles.clickable}><Facebook /></div>
+            <div className={styles.clickable}><Twitter /></div>
         </div>
         <div className={styles.border}></div>
         <div className={styles.contactSection}>
