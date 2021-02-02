@@ -1,0 +1,31 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 100%;
+    font-family: Montserrat;
+    font-size: large;
+}
+.active{
+    background-color: #F7C331;
+    border-bottom: 5px solid black;
+    font-weight: 700;
+    height:100%;
+    cursor: pointer;
+}
+
+.navbar_button{
+    height:100%;
+    cursor: pointer;
+}
+
+.icon_and_text{
+    display:flex;
+    flex-direction: row;
+    padding:2.5em;
+}
+
+.navbar_icon{
+    padding-right: 10px;
+}
