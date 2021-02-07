@@ -1,0 +1,26 @@
+.carousel{
+    height:300px;
+    position:relative;
+}
+.carousel_text{
+    color:white;
+    font-family: Montserrat;
+    position: absolute;
+    top:60%;
+    left:30%;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.shop_button{
+    color: white;
+    background-color: #FF5E6C;
+    border-radius: 12px;
+    font-size: x-large;
+    outline:none;
+    border: none;
+    font-family: Montserrat;
+    margin-left: 40%;
+    padding: 10px 20px 10px 30px;
+    cursor: pointer;
+}
