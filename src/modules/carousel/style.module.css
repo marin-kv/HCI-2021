@@ -1,12 +1,11 @@
 .carousel{
-    height:300px;
     position:relative;
 }
 .carousel_text{
     color:white;
     font-family: Montserrat;
     position: absolute;
-    top:60%;
+    top:40%;
     left:30%;
     font-size: 40px;
     font-weight: 600;

@@ -7,7 +7,7 @@ const Carousel_img = () => {
    query {
      myImage: file(relativePath: { eq: "beer_img.png" }) {
        childImageSharp {
-         fluid(maxWidth: 1440, maxHeight:350) {
+         fluid(maxWidth: 1440, maxHeight:300) {
            ...GatsbyImageSharpFluid_noBase64
          }
        }
