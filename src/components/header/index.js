@@ -5,10 +5,10 @@ import Login from "../login"
 import Beer_logo from "../Images/beer_logo"
 
 
-const Header = () => (
+const Header = ({activeTab}) => (
     <main className = {styles.header}>
-        <Beer_logo/>
-        <NavBar/>
+        <Beer_logo />
+        <NavBar activeTab = {activeTab}/>
         <Login/>
     </main>
     

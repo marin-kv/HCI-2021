@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const IndexPage = () => (
   
   <main>
-    <Header />
+    <Header activeTab = "Naslovnica"/>
     <Carousel/>
     <Footer/>
   </main>
