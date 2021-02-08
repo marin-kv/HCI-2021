@@ -4,11 +4,11 @@ import Carousel from "../modules/carousel"
 import Footer from '../components/Footer'
 
 const IndexPage = () => (
-  
+
   <main>
-    <Header activeTab = "Naslovnica"/>
-    <Carousel/>
-    <Footer/>
+    <Header activeTab="Naslovnica" />
+    <Carousel />
+    <Footer />
   </main>
 )
 

@@ -1,0 +1,11 @@
+.oNamaTitleText{
+    font-family: Montserrat;
+    color:white;
+    position:absolute;
+    z-index: 3;
+    padding: 10em 50em 7em 5em;
+}
+
+.oNamaTekst{
+    font-size: xx-large;
+}
