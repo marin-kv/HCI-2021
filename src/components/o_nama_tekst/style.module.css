@@ -1,14 +1,15 @@
 .body{
     display:flex;
     flex-direction: row;
+    background-color: #F8F4EF;
+    padding: 5em 0 5em 0;
 }
 .oNamaTekst{
-    background-color: #F8F4EF;
     font-family: Montserrat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2em 0em 2em 2em;
+    padding: 2em 20em 2em 5em;
 }
 
 .oNamaTekstNaslov{

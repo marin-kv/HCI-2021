@@ -14,7 +14,7 @@ const Mapa = () => {
      }
    }
  `)
-  return (<div style={{maxWidth: "800px", minWidth: "315px",maxHeight: "800px", minHeight: "325px"}}> 
+  return (<div style={{maxWidth: "800px", minWidth: "315px",maxHeight: "800px", minHeight: "325px", padding: "0 5em 0 0"}}> 
     <Img fluid={data.myImage.childImageSharp.fluid} />
     </div>)
  }
