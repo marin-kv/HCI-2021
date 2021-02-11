@@ -1,0 +1,38 @@
+.body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 33.333333%;
+    background-color: #F8F4EF;
+    padding: 2em 5em 2em 5em;
+    justify-content: center;
+}
+
+.article_style{
+    padding: 2em;
+    background-color: #F0E7DB;
+    margin: 2em;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 400px;
+    height:500px;
+}
+
+.article_title{
+    font-family: Montserrat;
+    padding: 1em 0 1em 0;
+    font-size: x-large;
+}
+
+.article_content{
+    font-family: Montserrat;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.article_arrow{
+    padding-top: 1em;
+    padding-left: 11em;
+    font-size: xx-large;
+}

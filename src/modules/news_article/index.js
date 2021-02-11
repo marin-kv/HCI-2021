@@ -1,10 +1,11 @@
 import React from "react"
 import styles from './style.module.css'
+import NewsArticle from "../../components/articles"
 
 const Articles = () => (
     <main className = {styles.articles}>
-        <div>NOVOSTI</div>
-        
+        <div className = {styles.title}>NOVOSTI</div>
+        <NewsArticle/>
     </main>
     
 )
