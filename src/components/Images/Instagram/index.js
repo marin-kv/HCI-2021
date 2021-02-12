@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Instagr = () => {
+const Instagram = () => {
    const data = useStaticQuery(graphql`
    query {
      myImage: file(relativePath: { eq: "Instagram.png" }) {
@@ -17,4 +17,4 @@ const Instagr = () => {
   return <Img fixed={data.myImage.childImageSharp.fixed} />
 }
 
-export default Instagr
+export default Instagram

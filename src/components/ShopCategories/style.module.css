@@ -1,0 +1,64 @@
+.shopCategories {
+    width: 20%;
+    background-color: #F0E7DA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categoriesTitle {
+    font-size: xx-large;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    padding:25px 5px;
+    border-bottom: 2px solid #C4C4C4;
+    width: 80%;
+    text-align: center;
+}
+
+.category {
+    font-size: x-large;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    border-bottom: 2px solid #C4C4C4;
+    width: 80%;
+    cursor: pointer;
+}
+
+.categoryText {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.categoryText:hover {
+    background-color: #DCC7AA;
+}
+
+.subCategory {
+    display: list-item;
+    font-size: large;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    border-top: 2px solid #C4C4C4;
+    width: 80%;
+    cursor: pointer;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.subCategory:hover {
+    background-color: #DCC7AA;
+}
+
+.subCategoryList {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in;
+}
