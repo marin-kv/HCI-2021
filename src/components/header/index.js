@@ -5,13 +5,13 @@ import Login from "../login"
 import Beer_logo from "../Images/beer_logo"
 
 
-const Header = ({activeTab}) => (
-    <main className = {styles.header}>
+const Header = ({ activeTab }) => (
+    <main className={styles.header}>
         <Beer_logo />
-        <NavBar activeTab = {activeTab}/>
-        <Login/>
+        <NavBar activeTab={activeTab} />
+        <Login />
     </main>
-    
+
 )
 
 export default Header

@@ -1,3 +1,4 @@
+require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -15,6 +16,8 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `@contentful/gatsby-transformer-contentful-richtext`,
+    `@contentful/rich-text-react-renderer`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -34,6 +37,14 @@ module.exports = {
           'Montserrat'
         ],
         display: 'swap'
+      }
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.ACCESS_KEY,
+        downloadLocal: true,
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
