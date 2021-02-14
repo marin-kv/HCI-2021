@@ -39,6 +39,7 @@ module.exports = {
         display: 'swap'
       }
     },
+    { resolve: `gatsby-transformer-remark` },
     {
       resolve: `gatsby-source-contentful`,
       options: {

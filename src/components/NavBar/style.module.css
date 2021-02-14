@@ -19,6 +19,9 @@
     height:100%;
     cursor: pointer;
 }
+.navbar_button:hover{
+    background-color: #EAC56E;
+}
 
 .icon_and_text{
     display:flex;
