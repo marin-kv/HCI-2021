@@ -13,9 +13,16 @@
 }
 
 .back_button{
-    padding: 2em;
+    padding: 1em;
     font-size: x-large;
     background-color: #F8F4EF;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.back_button:hover{
+    background-color: #DCC7AA;
+    transition: background .2s ease-in;
 }
 
 .blog_img{

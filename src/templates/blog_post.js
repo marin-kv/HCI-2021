@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styles from './blog_post.module.css'
 import Header from "../components/header"
 import Footer from '../components/Footer'
@@ -11,7 +11,7 @@ export default function BlogPost({ data }) {
   return (
     <main>
       <Header activeTab="Naslovnica" />
-      <div className={styles.back_button}>&#8249; Natrag</div>
+      <div style = {{backgroundColor:"#F8F4EF", padding:"1em"}}><Link to={"/"} style = {{textDecoration: 'none'}}><div className={styles.back_button}>&#8249; Natrag</div></Link></div>
       <div className={styles.body}>
         <div className={styles.article_title}>{data.allContentfulBlogPostAll.edges[0].node.title}</div>
         <div className={styles.writer}> by {data.allContentfulBlogPostAll.edges[0].node.writer}</div>
@@ -20,7 +20,7 @@ export default function BlogPost({ data }) {
         </div>
         <div className={styles.article_text}>{renderRichText(data.allContentfulBlogPostAll.edges[0].node.text)}</div>
       </div>
-      <div className={styles.back_button}>&#8249; Natrag</div>
+      <div style = {{backgroundColor:"#F8F4EF", padding:"1em"}}><Link to={"/"} style = {{textDecoration: 'none'}}><div className={styles.back_button}>&#8249; Natrag</div></Link></div>
       <Footer />
     </main>
   )
