@@ -10,23 +10,28 @@ const ShopCategories = (props) => {
                     <div className = {styles.categoryText} onClick = {(e) => handleCategoryClick(e, category, props.setCategory)}>
                         {category}
                     </div>
-                    {arrayToHtmlList(props.categories[category])}
+                    {arrayToHtmlList(props.categories[category], props.setCategory)}
                 </div>)
             }
         </div>
     );
 }
+
 function handleCategoryClick(e, category, setCategory) {
     for (let elem of e.target.parentNode.parentNode.children) {
         if (elem.firstChild === e.target.parentNode.firstChild) continue;
         else if (elem.firstChild.nextSibling !== null) elem.firstChild.nextSibling.style.maxHeight = '0';
     }
-    if (e.target.nextSibling !== null) e.target.nextSibling.style.maxHeight = '500px'
+    if (e.target.nextSibling !== null) e.target.nextSibling.style.maxHeight = '500px';
+    setCategory(category);
+    return;
 }
 
-function arrayToHtmlList(array) {
+function arrayToHtmlList(array, setCategory) {
     if (array.length === 0) return;
-    else return(<div className = {styles.subCategoryList}>{array.map(elem => <div className = {styles.subCategory}>{elem}</div>)}</div>);
+    else return(<div className = {styles.subCategoryList} >{
+        array.map(elem => <div className = {styles.subCategory} onClick = {() => setCategory(elem)} >{elem}</div>)
+    }</div>);
 }
 
 export default ShopCategories
