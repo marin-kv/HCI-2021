@@ -22,7 +22,6 @@
 
 .back_button:hover{
     background-color: #DCC7AA;
-    transition: background .2s ease-in;
 }
 
 .blog_img{
