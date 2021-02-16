@@ -2,11 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql, Link} from 'gatsby'
 import Img from 'gatsby-image'
 import styles from './style.module.css'
-<<<<<<< HEAD
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
-=======
-import { renderRichText } from "gatsby-source-contentful/rich-text"
->>>>>>> 847d15ccf7c855c34f9dd14e97ce7049193d98c7
 
 const NewsArticle = () => {
   const data = useStaticQuery(graphql`
