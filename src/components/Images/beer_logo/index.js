@@ -7,7 +7,7 @@ const Beer_logo = () => {
     query {
       myImage: file(relativePath: { eq: "beer_logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 800, maxHeight: 400) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -15,7 +15,7 @@ const Beer_logo = () => {
     }
   `)
    return (
-     <div style={{maxWidth: "800px", minWidth: "300px"}}> 
+     <div style={{maxWidth: "500px", minWidth: "250px"}}> 
        <Img fluid={data.myImage.childImageSharp.fluid} />
      </div>
    )

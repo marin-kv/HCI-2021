@@ -6,7 +6,7 @@ import styles from './style.module.css'
 const ShopProducts = (props) => {
     const data = useStaticQuery(graphql`
       {
-        allContentfulProduct(filter: {node_locale: {eq: "en-US"}}) {
+        allContentfulProduct(filter: {node_locale: {eq: "en-US"}}, sort: {fields: productName}) {
           edges {
             node {
               id
@@ -14,7 +14,7 @@ const ShopProducts = (props) => {
               productPrice
               productTags
               productImage {
-                fluid{
+                fluid(maxWidth: 300, maxHeight: 300){
                     ...GatsbyContentfulFluid
                     }
               }
@@ -46,7 +46,10 @@ const ShopProducts = (props) => {
                   <Img fluid={edge.node.productImage.fluid} style = {{borderRadius: '10px'}} />
                 </div>
                 <p>{edge.node.productName}</p>
-                <p>{edge.node.productPrice + ',99 kn'}</p>
+                <div style = {{display: 'flex', justifyContent: 'space-between'}} >
+                  <p style = {{textDecoration: 'line-through', margin: 0}} >{edge.node.productPrice + ',99 kn'}</p>
+                  <p style = {{color: 'red', margin: 0}} >{parseInt((edge.node.productPrice + 1) * 0.8) + ',99 kn'}</p>
+                </div>
               </div>
           )}
           </div>

@@ -6,6 +6,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-modal-routing`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -39,6 +40,7 @@ module.exports = {
         display: 'swap'
       }
     },
+    { resolve: `gatsby-transformer-remark` },
     {
       resolve: `gatsby-source-contentful`,
       options: {

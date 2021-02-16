@@ -26,3 +26,58 @@
 .login_icon{
     padding-right: 5px;
 }
+
+.prijava_modal{
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DCC7AA;
+    padding: 1em;
+    height: 500px;
+    justify-content: space-between;
+    font-size: xxx-large;
+}
+.customModal{
+    max-width: 300px;
+    width: 100%;
+    padding: 0em !important;
+    border-radius: 10px;
+}
+
+.input_window{
+    font-family: Montserrat;
+    height: 3em;
+    border-radius: 5px;
+    border-color: white;
+    outline:none;
+    color: gray;
+    font-size: large;
+    font-style: bold;
+}
+
+.login_button{
+    color: white;
+    background-color: #FF5E6C;
+    border-radius: 12px;
+    font-size: x-large;
+    outline:none;
+    border: none;
+    font-family: Montserrat;
+    cursor: pointer;
+    padding: 1em 2em 1em 2em;
+}
+
+.forgot{
+    font-size: large;
+    padding-top: 0.5em;
+    color: #0000EE;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.user_pass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
