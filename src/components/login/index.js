@@ -4,9 +4,26 @@ import Login_icon from "../Images/login_icon"
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 
+function checkCredentials(username, password, setOpenLogin, setFailedLogin) {
+    const users = [{ username: "Marin", password: "1234" }, { username: "Petar", password: "12345" }];
+    for (let user of users) {
+        if (user.username === username && user.password === password) {
+            localStorage.setItem("username", username);
+            setOpenLogin(false);
+            return true
+        }
+    }
+    setFailedLogin(true);
+    return false
 
+}
 
 const Login = () => {
+    const [failedLogin, setFailedLogin] = useState(false);
+
+    const [usernameInput, setUsername] = useState("");
+    const [passwordInput, setPassword] = useState("");
+
     const [openLogin, setOpenLogin] = useState(false);
     const [openRegister, setOpenRegister] = useState(false);
 
@@ -15,7 +32,16 @@ const Login = () => {
 
     const onOpenModalRegister = () => setOpenRegister(true);
     const onCloseModalRegister = () => setOpenRegister(false);
-    return (
+
+    if (localStorage.getItem("loggedIn") === "true") {
+        return (
+            <div className={styles.logged_in_style}>
+                <div className={styles.logged_in_text}>Pozdrav, {localStorage.getItem("username")}</div>
+                <a href="#" onClick={() => localStorage.setItem("loggedIn", false)} className={styles.logout_button}>Logout</a>
+            </div>
+        )
+    }
+    else return (
         <nav className={styles.login}>
             <button onClick={onOpenModalLogin} className={styles.prijava}><div className={styles.login_icon}><Login_icon /></div><div>Prijava</div></button>
             <button onClick={onOpenModalRegister} className={styles.registracija}>Registracija</button>
@@ -27,14 +53,15 @@ const Login = () => {
                 <div className={styles.prijava_modal}>
                     <div>Prijavi se</div>
                     <div className={styles.user_pass}>
-                        <input className={styles.input_window} type="text" placeholder="Korisničko ime ili email" size="50" />
-                        <a onClick={() => alert("Žao mi je 😂")} className={styles.forgot}>Zaboravili ste korisničko ime?</a>
+                        <form><input className={styles.input_window} type="text" placeholder="Korisničko ime ili email" size="50" onChange={(e) => setUsername(e.target.value)} /></form>
+                        <button onClick={() => alert("Žao mi je 😂")} className={styles.forgot}>Zaboravili ste korisničko ime?</button>
                     </div>
                     <div className={styles.user_pass}>
-                        <input className={styles.input_window} type="password" placeholder="Lozinka" size="50" />
-                        <a onClick={() => alert("Žao mi je 😂")} className={styles.forgot}>Zaboravili ste lozinku?</a>
+                        <form><input className={styles.input_window} type="password" placeholder="Lozinka" size="50" onChange={(e) => setPassword(e.target.value)} /></form>
+                        <button onClick={() => alert("Žao mi je 😂")} className={styles.forgot}>Zaboravili ste lozinku?</button>
                     </div>
-                    <button className={styles.login_button}>Prijava</button>
+                    <div className={failedLogin === true ? styles.failed_login_true : styles.failed_login_false}>Kriva lozinka i/ili korisničko ime</div>
+                    <button onClick={() => localStorage.setItem("loggedIn", checkCredentials(usernameInput, passwordInput, setOpenLogin, setFailedLogin))} className={styles.login_button}>Prijava</button>
                 </div>
             </Modal>
             <Modal open={openRegister} onClose={onCloseModalRegister} center
