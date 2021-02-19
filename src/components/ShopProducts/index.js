@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styles from './style.module.css'
 
@@ -29,13 +29,15 @@ const ShopProducts = (props) => {
           <div className = {styles.sectionTitle}>NOVO</div>
           <div className = {styles.offerSection}>
             {filterByTag(data, 'Novo').map(
-                edge => <div className = {styles.productCard}>
-                  <div className = {styles.productImage}>
-                    <Img fluid={edge.node.productImage.fluid} style = {{borderRadius: '10px'}} />
+                edge => <Link to = {'/products/' + edge.node.id}>
+                  <div className = {styles.productCard}>
+                    <div className = {styles.productImage}>
+                      <Img fluid={edge.node.productImage.fluid} style = {{borderRadius: '10px'}} />
+                    </div>
+                    <p>{edge.node.productName}</p>
+                    <p>{edge.node.productPrice + ',99 kn'}</p>
                   </div>
-                  <p>{edge.node.productName}</p>
-                  <p>{edge.node.productPrice + ',99 kn'}</p>
-                </div>
+                </Link>
             )}
           </div>
           <div className = {styles.sectionTitle}>AKCIJE</div>

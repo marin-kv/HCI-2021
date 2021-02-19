@@ -7,7 +7,6 @@ import Img from 'gatsby-image'
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 export default function BlogPost({ data }) {
-  console.log(data);
   return (
     <main>
       <Header activeTab="Naslovnica" />
