@@ -23,8 +23,29 @@
     border-radius: 12px;
     border: 2px solid #C4C4C4;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.offerSection::-webkit-scrollbar {
+    border-radius: inherit;
+}
+
+.offerSection::-webkit-scrollbar-thumb {
+    border-radius: inherit;
+    background-color: #DCC7AA;
+}
+
+.offerSection::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(220, 199, 170, 0.7);
+}
+
+.offerSection::-webkit-scrollbar-track {
+    background-color: #f8f4ef;
+    border:solid 2px rgba(220, 199, 170, 0.3);
+    border-radius: inherit;
 }
 
 .sectionTitle {

@@ -58,7 +58,7 @@ const ShopProducts = (props) => {
 
     else return(
         <div className = {styles.shopProductsSub}>
-          <div className = {styles.sectionTitle} style = {{marginLeft: '5%', padding: '2% 0',display: 'flex', justifyContent: 'space-between', alignItems: 'center'}} >
+          <div className = {styles.sectionTitle} style = {{marginLeft: '5%', padding: '2% 0',display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
             <div>{props.category.toUpperCase()}</div>
             <div className = {styles.backButton} onClick = {() => props.setCategory('')}>&#8249; Povratak</div>
           </div>
