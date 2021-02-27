@@ -3,10 +3,9 @@ import ShopCategories from '../../components/ShopCategories'
 import ShopProducts from '../../components/ShopProducts'
 import styles from './style.module.css'
 
-const categoryDict = {'Pivo': ['Svijetlo', 'Tamno', 'Lager', 'Ale', 'Pšenično'], 'Slad': [], 'Hmelj': [], 'Kvasac': [], 'Oprema': ['Kompleti', 'Fermentacija', 'Higijena', 'Punjenje']};
-
 const ShopBody = () => {
-    
+
+    const categoryDict = {'Pivo': ['Svijetlo', 'Tamno', 'Lager', 'Ale', 'Pšenično'], 'Slad': [], 'Hmelj': [], 'Kvasac': [], 'Oprema': ['Kompleti', 'Fermentacija', 'Higijena', 'Punjenje']};
     const [category, setCategory] = useState('');
     
     return(

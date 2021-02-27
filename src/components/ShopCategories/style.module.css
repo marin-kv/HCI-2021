@@ -20,6 +20,7 @@
     font-size: x-large;
     font-family: 'Montserrat';
     font-weight: 600;
+    text-decoration: none;
     width: 80%;
     cursor: pointer;
 }
@@ -43,6 +44,7 @@
     font-size: large;
     font-family: 'Montserrat';
     font-weight: 600;
+    text-decoration: none;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 25px;

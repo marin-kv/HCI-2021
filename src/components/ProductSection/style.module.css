@@ -1,0 +1,43 @@
+.productSection {
+    background-color: #f8f4ef;
+    width: 80%;
+    font-family: 'Montserrat';
+}
+
+.productUpper {
+    display: flex;
+    align-items: center;
+}
+
+.productUpperText {
+    height: 250px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartButton {
+    color: white;
+    background-color: #FF5E6C;
+    border-radius: 12px;
+    font-size: x-large;
+    outline:none;
+    border: none;
+    font-family: Montserrat;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.productImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 40px;
+}
+
+.productDescription {
+    font-size: x-large;
+    width: 80%;
+    margin: 40px;
+}
