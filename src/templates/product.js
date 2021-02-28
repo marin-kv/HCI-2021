@@ -1,21 +1,21 @@
 import React, { useState } from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import styles from './product.module.css'
 import Header from "../components/header"
 import Footer from '../components/Footer'
 import ShopCategories from '../components/ShopCategories'
 import ProductSection from '../components/ProductSection'
-import Img from 'gatsby-image'
 
 export default function Product({ data }) {
   const categoryDict = { 'Pivo': ['Svijetlo', 'Tamno', 'Lager', 'Ale', 'Pšenično'], 'Slad': [], 'Hmelj': [], 'Kvasac': [], 'Oprema': ['Kompleti', 'Fermentacija', 'Higijena', 'Punjenje'] };
   const [category, setCategory] = useState('');
+  const [categoryParent, setCategoryParent] = useState('');
 
   return (
     <main>
       <Header />
       <div className={styles.productBody}>
-        <ShopCategories categories={categoryDict} setCategory={setCategory} />
+        <ShopCategories categories={categoryDict} setCategory={setCategory} setCategoryParent={setCategoryParent} />
         <ProductSection data={data} />
       </div>
       <Footer />

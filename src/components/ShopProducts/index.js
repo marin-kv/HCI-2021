@@ -24,12 +24,17 @@ const ShopProducts = (props) => {
       }
     `)
 
+  let categoryTitle;
+  if (props.categoryParent !== '') categoryTitle = props.categoryParent.toUpperCase() + ' > ' + props.category.toUpperCase();
+  else categoryTitle = props.category.toUpperCase();
+
   if (props.category === '') return (
     <div className={styles.shopProductsMain}>
+      <input placeholder="Pretraži" className={styles.searchBar} />
       <div className={styles.sectionTitle}>NOVO</div>
       <div className={styles.offerSection}>
         {filterByTag(data, 'Novo').map(
-          edge => <Link to={'/products/' + edge.node.id} style={{textDecoration: 'none'}}>
+          edge => <Link to={'/products/' + edge.node.id} style={{ textDecoration: 'none' }}>
             <div className={styles.productCard}>
               <div className={styles.productImage}>
                 <Img fluid={edge.node.productImage.fluid} style={{ borderRadius: '10px' }} />
@@ -43,7 +48,7 @@ const ShopProducts = (props) => {
       <div className={styles.sectionTitle}>AKCIJE</div>
       <div className={styles.offerSection}>
         {filterByTag(data, 'Akcija').map(
-          edge => <Link to={'/products/' + edge.node.id} style={{textDecoration: 'none'}}>
+          edge => <Link key={edge.node.id} to={'/products/' + edge.node.id} style={{ textDecoration: 'none' }}>
             <div className={styles.productCard}>
               <div className={styles.productImage}>
                 <Img fluid={edge.node.productImage.fluid} style={{ borderRadius: '10px' }} />
@@ -62,18 +67,22 @@ const ShopProducts = (props) => {
 
   else return (
     <div className={styles.shopProductsSub}>
+      <div style={{width: '100%', textAlign: 'center'}}><input placeholder="Pretraži" className={styles.searchBar} /></div>
       <div className={styles.sectionTitle} style={{ marginLeft: '5%', padding: '2% 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div>{props.category.toUpperCase()}</div>
+        <div>{categoryTitle}</div>
         <div className={styles.backButton} onClick={() => props.setCategory('')}>&#8249; Povratak</div>
       </div>
       {filterByTag(data, props.category).map(
-        edge => <Link to={'/products/' + edge.node.id} style={{textDecoration: 'none'}}>
+        edge => <Link key={edge.node.id} to={'/products/' + edge.node.id} style={{ textDecoration: 'none' }}>
           <div className={styles.productCard}>
             <div className={styles.productImage}>
               <Img fluid={edge.node.productImage.fluid} style={{ borderRadius: '10px' }} />
             </div>
             <p>{edge.node.productName}</p>
-            <p>{edge.node.productPrice + ',99 kn'}</p>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }} >
+              <p style={{ textDecoration: edge.node.productTags.includes('Akcija')? 'line-through' : 'none', margin: 0 }} >{edge.node.productPrice + ',99 kn'}</p>
+              <p style={{ color: 'red', margin: 0, display: edge.node.productTags.includes('Akcija')? 'block' : 'none'}} >{parseInt((edge.node.productPrice + 1) * 0.8) + ',99 kn'}</p>
+            </div>
           </div>
         </Link>
       )}

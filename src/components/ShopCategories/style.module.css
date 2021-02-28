@@ -36,7 +36,7 @@
 }
 
 .categoryText:hover {
-    background-color: #DCC7AA;
+    background-color: #DCC7AA !important; 
 }
 
 .subCategory {
@@ -56,7 +56,7 @@
 }
 
 .subCategory:hover {
-    background-color: #DCC7AA;
+    background-color: #DCC7AA !important;
 }
 
 .subCategoryList {

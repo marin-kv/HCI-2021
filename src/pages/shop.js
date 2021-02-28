@@ -3,11 +3,11 @@ import Header from "../components/header"
 import Footer from "../components/Footer"
 import ShopBody from "../modules/ShopBody"
 
-const ShopPage = () => (
+const ShopPage = ({ location }) => (
   
   <main>
     <Header activeTab = "Shop"/>
-    <ShopBody />
+    <ShopBody sentCategory = {location.state.sentCategory}/>
     <Footer />
   </main>
 )
