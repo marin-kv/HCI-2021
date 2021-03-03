@@ -14,10 +14,20 @@
     border: 2px solid black;
     font-family: Montserrat;
 }
+@media only screen and (max-width: 1024px) {
+    .registracija {
+      display:none;
+    }
+  }
 .prijava{
     cursor: pointer;
     display: flex;
     flex-direction: row;
+}
+@media only screen and (max-width: 1024px) {
+    .prijava{
+        display:none;
+    }
 }
 .registracija{
     cursor: pointer;

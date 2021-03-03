@@ -7,6 +7,11 @@
     font-family: Montserrat;
     font-size: large;
 }
+@media only screen and (max-width: 1024px) {
+    .navBar{
+        display:none;
+    }
+  }
 .active{
     background-color: #F7C331;
     border-bottom: 5px solid black;

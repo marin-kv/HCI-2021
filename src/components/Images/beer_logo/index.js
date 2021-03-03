@@ -7,7 +7,7 @@ const Beer_logo = () => {
     query {
       myImage: file(relativePath: { eq: "beer_logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800, maxHeight: 400) {
+          fluid {
             ...GatsbyImageSharpFluid_noBase64
           }
         }

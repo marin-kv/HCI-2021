@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, {useState} from "react"
 import styles from './style.module.css'
 import Login_icon from "../Images/login_icon"
 import { Modal } from 'react-responsive-modal';

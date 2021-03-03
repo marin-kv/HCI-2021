@@ -11,20 +11,20 @@ const Footer = () => (
             <Logo />
             <p>Sve za pivo,<br />&nbsp;sve o pivu</p>
         </div>
-        <div className={styles.border}></div>
+        <div className={styles.borderLeft}></div>
         <div className={styles.footerSectionFollow}>
             Prati nas
             <div className={styles.clickable}><Instagram /></div>
             <div className={styles.clickable}><Facebook /></div>
             <div className={styles.clickable}><Twitter /></div>
         </div>
-        <div className={styles.border}></div>
+        <div className={styles.borderRight}></div>
         <div className={styles.contactSection}>
-            <div>Kontakt</div>
+            <div className={styles.contactText}>Kontakt</div>
             <div>
                 <ul>
-                    <li style={{fontSize: 'medium'}}>email: email@primjer.com</li>
-                    <li style={{fontSize: 'medium'}}>tel: +385 99 123 1234</li>
+                    <li>email: email@primjer.com</li>
+                    <li>tel: +385 99 123 1234</li>
                 </ul>
             </div>
         </div>

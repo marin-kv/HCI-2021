@@ -15,3 +15,14 @@
 .oNamaTekstNaslov{
     font-size: xx-large;
 }
+
+@media only screen and (max-width: 991px) {
+    .body{
+        flex-direction: column;
+        padding: 0;
+        
+    }
+    .oNamaTekst{
+        padding: 2em;
+    }
+  }
