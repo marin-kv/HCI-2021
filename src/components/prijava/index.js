@@ -1,13 +1,14 @@
 import React, { useState } from "react"
 import styles from './style.module.css'
 import { navigate } from "@reach/router";
+import { myLocalStorage } from "../../helper";
 
 function checkCredentialsLogin(username, password, setFailedLogin) {
     const users = [{ username: "Marin", password: "1234" }, { username: "Petar", password: "12345" }];
     for (let user of users) {
         if (user.username === username && user.password === password) {
-            localStorage.setItem("username", username);
-            localStorage.setItem("loggedIn", true);
+            myLocalStorage.setItem("username", username);
+            myLocalStorage.setItem("loggedIn", true);
             setFailedLogin(false);
             return true
         }

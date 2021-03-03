@@ -7,7 +7,7 @@ const ShopPage = ({ location }) => (
   
   <main>
     <Header activeTab = "Shop"/>
-    <ShopBody sentCategory = {location.state.sentCategory}/>
+    <ShopBody sentCategory = {location.state ? location.state.sentCategory : ''}/>
     <Footer />
   </main>
 )
