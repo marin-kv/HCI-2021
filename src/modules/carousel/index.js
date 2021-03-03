@@ -20,7 +20,7 @@ const Carousel = () => {
     return (
         <BackgroundImage fluid = {data.myImage.childImageSharp.fluid} className={styles.carousel}>
             <div className={styles.carousel_text}>Želiš sam započeti? Posjeti naš web shop</div>
-            <button className={styles.shop_button}>Shop &#8594;</button>
+            <Link to="/shop/"><button className={styles.shop_button}>Shop &#8594;</button></Link>
         </BackgroundImage>
 
     )
