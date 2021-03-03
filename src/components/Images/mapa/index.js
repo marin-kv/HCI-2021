@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styles from './style.module.css'
 
 const Mapa = () => {
     const data = useStaticQuery(graphql`
@@ -14,7 +15,7 @@ const Mapa = () => {
      }
    }
  `)
-  return (<div style={{maxWidth: "800px", minWidth: "315px",maxHeight: "800px", minHeight: "325px", padding: "0 5em 0 0"}}> 
+  return (<div className = {styles.mapStyle}> 
     <Img fluid={data.myImage.childImageSharp.fluid} />
     </div>)
  }

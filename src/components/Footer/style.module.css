@@ -15,6 +15,7 @@
     font-size: large;
 }
 
+
 .footerSectionFollow {
     display: flex;
     justify-content: space-around;
@@ -32,7 +33,16 @@ ul {
     min-height: 100%;
 }
 
-.border {
+li {
+    font-size: medium;
+}
+.borderLeft {
+    width: 1px;
+    height: 40px;
+    background-color: black;
+}
+
+.borderRight {
     width: 1px;
     height: 40px;
     background-color: black;
@@ -53,3 +63,21 @@ a {
 .clickable {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 845px) {
+    .footerSectionLogo {
+      display:none;
+    }
+    .borderLeft{
+        display:none;
+    }
+    .contactText{
+        display:none;
+    }
+    ul{
+        padding: 0;
+    }
+    li{
+        font-size: small;
+    }
+  }

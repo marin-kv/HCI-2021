@@ -1,12 +1,13 @@
 .carousel{
-    position:relative;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height:300px;
 }
 .carousel_text{
     color:white;
     font-family: Montserrat;
-    position: absolute;
-    top:40%;
-    left:30%;
     font-size: 40px;
     font-weight: 600;
 }
@@ -19,7 +20,12 @@
     outline:none;
     border: none;
     font-family: Montserrat;
-    margin-left: 40%;
     padding: 10px 20px 10px 30px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1024px) {
+    .carousel_text{
+        display:none;
+    }
+  }

@@ -28,7 +28,7 @@ const NewsArticle = () => {
   return (<div className={styles.body}>
     {data.allContentfulBlogPostAll.edges.map(
       edge => <div key={edge.node.id} className={styles.article_style}><Link to={"/posts/" + edge.node.id} style = {{textDecoration: 'none'}}>
-        <div style={{ maxWidth: "800px", minWidth: "300px", minHeight: "150px" }}>
+        <div>
           <Img fluid={edge.node.blogImage.fluid} />
         </div>
         <div className={styles.article_title}>{edge.node.title}</div>
