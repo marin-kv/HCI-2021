@@ -1,0 +1,46 @@
+.body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Montserrat;
+    background-color: #F0E7DB;
+    height:100vh;
+}
+.login_button{
+    color: white;
+    background-color: #FF5E6C;
+    border-radius: 12px;
+    font-size: x-large;
+    outline:none;
+    border: none;
+    font-family: Montserrat;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    margin-top: 1em;
+}
+.registriraj_se_header{
+    font-size: x-large;
+    padding: 1em 0;
+}
+.failed_login_true{
+    color: red;
+    font-size: large;
+}
+
+.failed_login_false{
+    color: red;
+    font-size: large;
+    display:none;
+}
+.input_window{
+    font-family: Montserrat;
+    height: 2em;
+    border-radius: 5px;
+    border-color: white;
+    outline:none;
+    color: gray;
+    font-size: large;
+    font-style: bold;
+    margin:0.5em 0;
+}

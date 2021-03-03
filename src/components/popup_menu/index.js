@@ -24,7 +24,9 @@ const PopupMenu = ({ activeTab }) => {
                 <div className={activeTab === "Naslovnica" ? styles.active : styles.navbar_button}><Link to="/" style={{ textDecoration: 'none' }}><div>NASLOVNICA</div></Link></div>
                 <div className={activeTab === "Shop" ? styles.active : styles.navbar_button}><Link to="/shop/" style={{ textDecoration: 'none' }}><div>SHOP</div></Link></div>
                 <div className={activeTab === "O_nama" ? styles.active : styles.navbar_button}><Link to="/o_nama/" style={{ textDecoration: 'none' }}><div>O NAMA</div></Link></div>
+                <div className= {styles.prijava_button}>
                 <div className={activeTab === "Prijava" ? styles.active : styles.navbar_button}><Link to="/prijava/" style={{ textDecoration: 'none' }}><div>PRIJAVA</div></Link></div>
+                </div>
             </div>
         </div>
     )
