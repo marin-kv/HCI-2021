@@ -41,3 +41,23 @@
     width: 75%;
     margin: 40px;
 }
+
+.numberInput {
+    width: 15%;
+    height: 100%;
+    margin-left: 20px;
+    font-size: x-large;
+    border-radius: 10px;
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {  
+
+   opacity: 1;
+
+}
+
+input[type=number]::-webkit-inner-spin-button {  
+    height: 2em;
+    width: 2em;
+}
