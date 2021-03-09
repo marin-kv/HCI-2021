@@ -23,10 +23,6 @@
 
 .article_content{
     font-family: Montserrat;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
 }
 
 .article_arrow{
