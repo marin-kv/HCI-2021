@@ -15,7 +15,7 @@ const Beer_logo = () => {
     }
   `)
    return (
-     <div style={{maxWidth: "500px", minWidth: "250px"}}> 
+     <div style={{width: '180px', paddingLeft: '20px', paddingRight: '20px'}}> 
        <Img fluid={data.myImage.childImageSharp.fluid} />
      </div>
    )
