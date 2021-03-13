@@ -51,7 +51,7 @@ const Login = () => {
         return (
             <div className={styles.logged_in_style}>
                 <div className={styles.logged_in_text}>Pozdrav, {myLocalStorage.getItem("username")}</div>
-                <a href="#" onClick={() => myLocalStorage.setItem("loggedIn", false)} className={styles.logout_button}>Logout</a>
+                <a href="#" onClick={() => myLocalStorage.setItem("loggedIn", false)} className={styles.logout_button}>Odjavi se</a>
             </div>
         )
     }
