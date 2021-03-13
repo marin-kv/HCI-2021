@@ -3,10 +3,30 @@
 }
 
 .prijava_button {
-    width: 80%;
     display: contents;
 }
+.prijava_button_hidden {
+    display: none;
+}
+.loggedIn{
+    padding-top: 10px;
+}
+.loggedIn_hidden{
+    padding-top: 10px;
+    display:none;
+}
 
+.odjava_button{
+    background-color: #F7C331;
+    border-radius: 10px;
+    padding: 0.5em;
+    border-style: solid;
+    border-color: black;
+    text-decoration: none;
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+}
 .popupMenu {
     font-family: Montserrat;
     position: fixed;
