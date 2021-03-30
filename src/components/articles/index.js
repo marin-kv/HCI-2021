@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link} from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styles from './style.module.css'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
@@ -26,17 +26,17 @@ const NewsArticle = () => {
           }
         }
     `)
-  console.log(renderRichText(data.allContentfulBlogPostAll.edges[0].node.text))  
+
   return (<div className={styles.body}>
     {data.allContentfulBlogPostAll.edges.map(
-      edge => <div key={edge.node.id} className={styles.article_style}><Link to={"/posts/" + edge.node.id} style = {{textDecoration: 'none'}}>
+      edge => <div key={edge.node.id} className={styles.article_style}><Link to={"/posts/" + edge.node.id} style={{ textDecoration: 'none' }}>
         <div>
           <Img fluid={edge.node.blogImage.fluid} />
         </div>
         <div className={styles.article_title}>{edge.node.title}</div>
-        <TextEllipsis lines={4} tag={'p'} ellipsisChars={'...'} tagClass={styles.article_content} useJsOnly={true}>{renderRichText(edge.node.text)}</TextEllipsis>
+        <TextEllipsis lines={5} tag={'div'} ellipsisChars={'...'} tagClass={styles.article_content} useJsOnly={true}>{renderRichText(edge.node.text)}</TextEllipsis>
         <div className={styles.article_arrow}>&#8594;</div>
-        </Link></div>)}
+      </Link></div>)}
   </div>
   )
 }

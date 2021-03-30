@@ -13,6 +13,7 @@ const Header = ({ activeTab }) => {
             <Beer_logo />
             <NavBar activeTab={activeTab} />
             <Login />
+            <div className={styles.mobileDummy}></div>
         </main>
     )
 }

@@ -13,7 +13,7 @@ const Footer = () => (
         </div>
         <div className={styles.borderLeft}></div>
         <div className={styles.footerSectionFollow}>
-            Prati nas
+            <div className={styles.followText}>Prati nas</div>
             <div className={styles.clickable}><Instagram /></div>
             <div className={styles.clickable}><Facebook /></div>
             <div className={styles.clickable}><Twitter /></div>

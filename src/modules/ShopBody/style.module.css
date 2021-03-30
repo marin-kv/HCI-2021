@@ -1,4 +1,11 @@
 .shopBody {
     min-height: 1000px;
     display: flex;
+    background-color: #f8f4ef;
+}
+
+@media only screen and (max-width: 1024px) {
+    .shopBody {
+        flex-direction: column;
+    }
 }

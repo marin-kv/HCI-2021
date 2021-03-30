@@ -33,18 +33,18 @@ const CartBody = () => {
             <div className={styles.cartTitle}>KOŠARICA</div>
             <div className={styles.cartHead}>
               <div>Proizvod</div>
-              <div style={{width: '30%',display: 'flex', justifyContent: 'space-between'}}>
+              <div className={styles.productQuantity}>
                 <div>Cijena</div>
                 <div>Količina</div>
               </div>
             </div>
             {data.allContentfulProduct.edges.map(
               edge => <div key={edge.node.id} className={styles.cartProduct}>
-                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '50%'}}>
+                <div className={styles.productView} style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '50%'}}>
                   <Img className={styles.productImage} fluid={edge.node.productImage.fluid} />
-                  <div style={{width: '50%'}}>{edge.node.productName}</div>
+                  <div className={styles.productName}>{edge.node.productName}</div>
                 </div>
-                <div style={{width: '30%',display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                <div className={styles.productQuantity}>
                   <div>{edge.node.productPrice + ',99 kn'}</div>
                   <div className={styles.quantBox}>{quantArray[data.allContentfulProduct.edges.indexOf(edge)]}</div>
                 </div>
@@ -54,7 +54,7 @@ const CartBody = () => {
               <Link to='/shop' className={styles.backButton}>&#8249; Natrag</Link>
               <div style={{textAlign: 'end'}}>
                 <div style={{fontWeight: 'normal'}}>Ukupno:</div>
-                <div style={{padding: '15px 0'}}>4291,93 kn</div>
+                <div style={{padding: '10px 0'}}>4291,93 kn</div>
                 <div className={styles.orderButton}>Naruči</div>
               </div>
             </div>

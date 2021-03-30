@@ -13,3 +13,14 @@
 .logo {
   margin-left: 20px;
 }
+
+.mobileDummy {
+  display: none;
+  width: 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .mobileDummy {
+    display: block;
+  }
+}

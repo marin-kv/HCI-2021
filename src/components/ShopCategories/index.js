@@ -8,7 +8,11 @@ const ShopCategories = (props) => {
             <div className={styles.categoriesTitle}>Kategorije</div>
             {Object.keys(props.categories).map(
                 category => <Link to='/shop' key={category} state={{ sentCategory: category }} className={styles.category} >
-                    <div className={styles.categoryText} style={{backgroundColor: props.category===category ? '#DCC7AA' : '#F0E7DA'}} onClick={(e) => handleCategoryClick(e, category, props.category, props.setCategory, props.setCategoryParent)}>
+                    <div className={styles.categoryText} style={{
+                        backgroundColor: props.category===category ? '#DCC7AA' : '#F0E7DA'
+                }} onClick={(e) => {
+                        handleCategoryClick(e, category, props.category, props.setCategory, props.setCategoryParent);
+                    }}>
                         {category}
                     </div>
                     {arrayToHtmlList(category, props.categories[category], props.category, props.setCategory, props.setCategoryParent)}
