@@ -4,6 +4,7 @@ import Login_icon from "../Images/login_icon"
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import { myLocalStorage } from "../../helper";
+import CartLogo from "../Images/cartButton"
 
 function checkCredentialsLogin(username, password, setOpenLogin, setFailedLogin) {
     const users = [{ username: "Marin", password: "1234" }, { username: "Petar", password: "12345" }];
@@ -49,10 +50,14 @@ const Login = () => {
 
     if (myLocalStorage.getItem("loggedIn") === "true") {
         return (
-            <div className={styles.logged_in_style}>
-                <div className={styles.logged_in_text}>Pozdrav, {myLocalStorage.getItem("username")}</div>
-                <a href="#" onClick={() => myLocalStorage.setItem("loggedIn", false)} className={styles.logout_button}>Odjavi se</a>
+            <div className ={styles.logged_in_wrapper}>
+                <CartLogo/>
+                <div className={styles.logged_in_style}>
+                    <div className={styles.logged_in_text}>Pozdrav, {myLocalStorage.getItem("username")}</div>
+                    <a href="#" onClick={() => myLocalStorage.setItem("loggedIn", false)} className={styles.logout_button}>Odjavi se</a>
+                </div>
             </div>
+            
         )
     }
     else return (

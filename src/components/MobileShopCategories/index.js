@@ -9,7 +9,9 @@ const MobileShopCategories = (props) => {
     useEffect(() => {
         if (categoryFrame.current.style.maxHeight === '0px') {
             setTimeout(() => {
-                categoryFrame.current.style.border = 'none';
+                if(categoryFrame.current != null){
+                    categoryFrame.current.style.border = 'none';
+                }
             }, 500);
         }
         else categoryFrame.current.style.border = 'solid 2px #C4C4C4';

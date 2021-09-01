@@ -1,0 +1,14 @@
+.button{
+    padding:5px; 
+    align-self:center;
+    background-color:#F7C331;
+    width:10%;
+    border-style:solid;
+    border-radius:10px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .button{
+        width:25%;
+    }
+}

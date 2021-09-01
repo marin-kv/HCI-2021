@@ -6,6 +6,7 @@ import {
     faBars
 } from '@fortawesome/free-solid-svg-icons'
 import { myLocalStorage } from "../../helper";
+import CartLogo from "../Images/cartButton"
 
 function popupClick(changePopupState) {
     changePopupState(true);
@@ -29,10 +30,11 @@ const PopupMenu = ({ activeTab }) => {
                     <div className={activeTab === "Prijava" ? styles.active : styles.navbar_button}><Link to="/prijava/" style={{ textDecoration: 'none' }}><div>PRIJAVA</div></Link></div>
                 </div>
                 <div className={myLocalStorage.getItem("loggedIn") === "true" ? styles.loggedIn : styles.loggedIn_hidden}>
-                    <div style = {{display:"flex", flexDirection:"column"}}>
+                    <div style = {{display:"flex", flexDirection:"column",marginBottom:"20px"}}>
                         Pozdrav, {myLocalStorage.getItem("username")}
                         <a href="#" onClick={() => myLocalStorage.setItem("loggedIn", false)} className = {styles.odjava_button}>Odjavi se</a>
                     </div>
+                    <CartLogo/>
                 </div>
             </div>
         </div>
