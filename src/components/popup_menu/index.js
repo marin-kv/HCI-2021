@@ -26,7 +26,7 @@ const PopupMenu = ({ activeTab }) => {
                 <div className={activeTab === "Naslovnica" ? styles.active : styles.navbar_button}><Link to="/" style={{ textDecoration: 'none' }}><div>NASLOVNICA</div></Link></div>
                 <div className={activeTab === "Shop" ? styles.active : styles.navbar_button}><Link to="/shop/" style={{ textDecoration: 'none' }}><div>SHOP</div></Link></div>
                 <div className={activeTab === "O_nama" ? styles.active : styles.navbar_button}><Link to="/o_nama/" style={{ textDecoration: 'none' }}><div>O NAMA</div></Link></div>
-                <div className={myLocalStorage.getItem("loggedIn") === "false" ? styles.prijava_button : styles.prijava_button_hidden}>
+                <div className={myLocalStorage.getItem("loggedIn") !== "true" ? styles.prijava_button : styles.prijava_button_hidden}>
                     <div className={activeTab === "Prijava" ? styles.active : styles.navbar_button}><Link to="/prijava/" style={{ textDecoration: 'none' }}><div>PRIJAVA</div></Link></div>
                 </div>
                 <div className={myLocalStorage.getItem("loggedIn") === "true" ? styles.loggedIn : styles.loggedIn_hidden}>
