@@ -2,6 +2,8 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styles from './style.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const ShopProducts = (props) => {
   const data = useStaticQuery(graphql`
@@ -31,7 +33,10 @@ const ShopProducts = (props) => {
 
   if (props.category === '') return (
     <div className={styles.shopProductsMain}>
-      <input placeholder="Pretraži" className={styles.searchBar} />
+      <div className={styles.searchBar}>
+        <FontAwesomeIcon icon={faSearch} style={{color: 'gray', marginRight: '12px'}} />
+        <input placeholder="Pretraži" style={{ border: 'none', outline: 'none', fontFamily: 'Montserrat', fontSize: '16px', width: '80%' }} />
+      </div>
       <div className={styles.sectionTitle}>NOVO</div>
       <div className={styles.offerSection}>
         {filterByTag(data, 'Novo').map(
@@ -68,7 +73,12 @@ const ShopProducts = (props) => {
 
   else return (
     <div className={styles.shopProductsSub}>
-      <div style={{ width: '100%', textAlign: 'center' }}><input placeholder="Pretraži" className={styles.searchBar} /></div>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <div className={styles.searchBar}>
+          <FontAwesomeIcon icon={faSearch} style={{color: 'gray', marginRight: '12px'}} />
+          <input placeholder="Pretraži" style={{ border: 'none', outline: 'none', fontFamily: 'Montserrat', fontSize: '16px', width: '80%' }} />
+        </div>
+      </div>
       <div className={styles.sectionTitle} style={{ padding: '2% 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>{categoryTitle}</div>
         <div className={styles.backButton} onClick={() => props.setCategory('')}>&#8249; Povratak</div>

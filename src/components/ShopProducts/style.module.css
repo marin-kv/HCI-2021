@@ -51,16 +51,13 @@
 
 .searchBar {
     width: 30%;
-    font-family: 'Montserrat';
     box-sizing: border-box;
     border-radius: 20px;
     border: 2px solid #C4C4C4;
-    font-size: 16px;
     background-color: white;
     background-position: 10px 10px; 
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    outline: none;
+    padding: 12px 20px 12px 12px;
     margin-top: 20px;
 }
 
