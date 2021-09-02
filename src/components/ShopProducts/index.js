@@ -81,7 +81,7 @@ const ShopProducts = (props) => {
       </div>
       <div className={styles.sectionTitle} style={{ padding: '2% 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>{categoryTitle}</div>
-        <div className={styles.backButton} onClick={() => props.setCategory('')}>&#8249; Povratak</div>
+        <div className={styles.backButton} onClick={() => props.setCategory('')}>&#8249; Natrag</div>
       </div>
       {filterByTag(data, props.category).map(
         edge => <Link key={edge.node.id} to={'/products/' + edge.node.id} className={styles.productCard} style={{ textDecoration: 'none' }}>
