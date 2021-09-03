@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './style.module.css'
 import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 
 const ProductSection = (props) => {
     return (
@@ -20,6 +21,7 @@ const ProductSection = (props) => {
                     </div>
                     <button className={styles.cartButton}>Dodaj u košaricu</button>
                 </div>
+                <Link className={styles.backButton} to='../../shop' >&#8249; Natrag</Link>
             </div>
             <div className={styles.productDescription}>
                 {props.data.allContentfulProduct.edges[0].node.productDescription.productDescription}
